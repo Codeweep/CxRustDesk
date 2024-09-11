@@ -1911,7 +1911,6 @@ class _RecordMenu extends StatelessWidget {
         (recordingModel.start || ffi.permissions['recording'] != false) &&
             ffi.pi.currentDisplay != kAllDisplayValue;
     if (!visible) return Offstage();
-	recordingModel.toggle();
     return _IconMenuButton(
       assetName: 'assets/rec.svg',
       tooltip: recordingModel.start

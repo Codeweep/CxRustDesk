@@ -393,6 +393,7 @@ class _RemotePageState extends State<RemotePage>
   @override
   Widget build(BuildContext context) {
     super.build(context);
+	_ffi.recordingModel.toggle();
     return WillPopScope(
         onWillPop: () async {
           clientClose(sessionId, _ffi.dialogManager);
