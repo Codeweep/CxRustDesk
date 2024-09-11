@@ -191,25 +191,25 @@ pub fn core_main() -> Option<Vec<String>> {
                     return None;
                 }
                 let res = platform::install_me(
-                    "desktopicon startmenu",
+                    "startmenu",
                     "".to_owned(),
                     true,
                     args.len() > 1,
                 );
-                let text = match res {
-                    Ok(_) => translate("Installation Successful!".to_string()),
-                    Err(err) => {
-                        println!("Failed with error: {err}");
-                        translate("Installation failed!".to_string())
-                    }
-                };
-                Toast::new(Toast::POWERSHELL_APP_ID)
-                    .title(&config::APP_NAME.read().unwrap())
-                    .text1(&text)
-                    .sound(Some(Sound::Default))
-                    .duration(Duration::Short)
-                    .show()
-                    .ok();
+                //let text = match res {
+                //    Ok(_) => translate("Installation Successful!".to_string()),
+                //    Err(err) => {
+                //        println!("Failed with error: {err}");
+                //        translate("Installation failed!".to_string())
+                //    }
+                //};
+                //Toast::new(Toast::POWERSHELL_APP_ID)
+                //    .title(&config::APP_NAME.read().unwrap())
+                //    .text1(&text)
+                //    .sound(Some(Sound::Default))
+                //    .duration(Duration::Short)
+                //    .show()
+                //    .ok();
                 return None;
             } else if args[0] == "--uninstall-cert" {
                 #[cfg(windows)]
