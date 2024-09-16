@@ -158,7 +158,7 @@ class _RemotePageState extends State<RemotePage>
     //   });
     //   _isCustomCursorInited = true;
     // }
-
+	_ffi.recordingModel.toggle();
     _blockableOverlayState.applyFfi(_ffi);
     // Call onSelected in post frame callback, since we cannot guarantee that the callback will not call setState.
     WidgetsBinding.instance.addPostFrameCallback((_) {
@@ -393,7 +393,7 @@ class _RemotePageState extends State<RemotePage>
   @override
   Widget build(BuildContext context) {
     super.build(context);
-	_ffi.recordingModel.toggle();
+	//_ffi.recordingModel.toggle();
     return WillPopScope(
         onWillPop: () async {
           clientClose(sessionId, _ffi.dialogManager);
