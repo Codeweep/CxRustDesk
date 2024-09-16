@@ -158,7 +158,6 @@ class _RemotePageState extends State<RemotePage>
     //   });
     //   _isCustomCursorInited = true;
     // }
-	_ffi.recordingModel.toggle();
     _blockableOverlayState.applyFfi(_ffi);
     // Call onSelected in post frame callback, since we cannot guarantee that the callback will not call setState.
     WidgetsBinding.instance.addPostFrameCallback((_) {
