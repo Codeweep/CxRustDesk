@@ -661,8 +661,6 @@ Future<List<TToggleMenu>> toolbarDisplayToggle(
         child: Text(translate('View Mode'))));
   }
   
-  ffi.recordingModel.toggle();
-  
   return v;
 }
 
